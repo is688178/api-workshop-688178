@@ -18,7 +18,7 @@ app.post("/api/create_cone", (req, res) => {
   (async () => {
     try {
       await db.collection("cones")
-          .doc("/" + req.cone.id + "/")
+          .doc("/" + req.body.id + "/")
           .create(req.body.cone);
       return res.status(200)
           .send({"status": "cone successfully created"});
@@ -112,7 +112,7 @@ app.post("/api/create_spare_part", (req, res) => {
   (async () => {
     try {
       await db.collection("spare_parts")
-          .doc("/" + req.spare_part.id + "/")
+          .doc("/" + req.body.id + "/")
           .create(req.body.spare_part);
       return res.status(200)
           .send({"status": "sp successfully created"});
