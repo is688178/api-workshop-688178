@@ -31,7 +31,7 @@ app.post("/api/create_cone", (req, res) => {
 
 
 // read all cones
-app.get("/api/read_cone", (req, res) => {
+app.get("/api/read_cones", (req, res) => {
   (async () => {
     try {
       const query = db.collection("cones");
@@ -57,8 +57,8 @@ app.get("/api/read_cone", (req, res) => {
 
 
 // read cone
-// {{API}}/api/read/AX-002-2021
-app.get("/api/read/:cone_id", (req, res) => {
+// {{API}}/api/read_cone/AX-002-2021
+app.get("/api/read_cone/:cone_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("cones")
@@ -75,8 +75,8 @@ app.get("/api/read/:cone_id", (req, res) => {
 
 
 // update cone
-// {{API}}/api/update/AX-002-2021
-app.put("/api/update/:cone_id", (req, res) => {
+// {{API}}/api/update_cone/AX-002-2021
+app.put("/api/update_cone/:cone_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("cones")
@@ -92,7 +92,7 @@ app.put("/api/update/:cone_id", (req, res) => {
 
 
 // delete cone
-app.delete("/api/delete/:cone_id", (req, res) => {
+app.delete("/api/delete_cone/:cone_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("cones")
@@ -125,7 +125,7 @@ app.post("/api/create_spare_part", (req, res) => {
 
 
 // read all spare_parts
-app.get("/api/read_spare_part", (req, res) => {
+app.get("/api/read_spare_parts", (req, res) => {
   (async () => {
     try {
       const query = db.collection("spare_parts");
@@ -151,7 +151,7 @@ app.get("/api/read_spare_part", (req, res) => {
 
 
 // read spare_part
-app.get("/api/read/:spare_part_id", (req, res) => {
+app.get("/api/read_sp/:spare_part_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("spare_parts")
@@ -168,7 +168,7 @@ app.get("/api/read/:spare_part_id", (req, res) => {
 
 
 // update spare_part
-app.put("/api/update/:spare_part_id", (req, res) => {
+app.put("/api/update_sp/:spare_part_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("spare_parts")
@@ -184,7 +184,7 @@ app.put("/api/update/:spare_part_id", (req, res) => {
 
 
 // delete spare_part
-app.delete("/api/delete/:spare_part_id", (req, res) => {
+app.delete("/api/delete_sp/:spare_part_id", (req, res) => {
   (async () => {
     try {
       const document = db.collection("spare_parts")
