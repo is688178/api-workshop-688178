@@ -199,4 +199,3 @@ app.delete("/api/delete_sp/:spare_part_id", (req, res) => {
 });
 
 exports.app = functions.region("us-central1").https.onRequest(app);
-
